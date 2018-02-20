@@ -3,13 +3,18 @@
     var count_check1=0;
     var startelements=[];
     var endelements=[];
-    //receive elements--------------------------
+    //receive elements here at first and push the into two array--------------------------
+    // startelements array contains of all path's starting element
+    // endelements array contains of all path's end element
     function dynamicPath(elm1,elm2)
     {
       startelements.push(elm1);
       endelements.push(elm2);
       create(elm1,elm2);
     }
+
+
+//This resize event is for change path automatically depending of window size so that it looks responsive----
     window.addEventListener('resize',reDrawPath);
     //For redrwaing path-----------------
     function reDrawPath()
@@ -23,7 +28,12 @@
         create(startelements[i],endelements[i]);
       }
     }
-    //create path start-----------------------------------------------------------------------------
+
+
+    //create function start the create the path-----------------------------------------------------------------------------
+    //It detects the position of start element and ending element and for good visuailzation add some extra value---
+    //It also check already start point and end point is previously used in another path or not if used,
+    //then starting point or destination point changes by adding some values.
     function create(elm1,elm2)
     {
         var getXelmfrom=getOffsetLeft(elm1);

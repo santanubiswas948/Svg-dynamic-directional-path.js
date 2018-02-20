@@ -1,5 +1,5 @@
 # Svg-Dynamic-directional-Path.js
-It is a javascript library. Using this library you can create Dynamic path with direction between html div elements.
+It is a javascript library. Using this library you can create Dynamic path with arrow direction between html div elements with good visualization and responsive.
 # Why need Svg-Dynamic-directional-Path.js??
 Sometimes we need to connect two div elements dynamically with direction for best visualization in our application.
 # Prerequisites

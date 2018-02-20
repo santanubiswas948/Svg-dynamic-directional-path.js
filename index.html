@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <style type="text/css">
+          *{
+            margin: 0px;
+            border: 0px;
+          }
+          #div1{
+            margin: 50px;
+            float: left;
+            background-color:#000;
+            width:200px;
+            height:200px
+          }
+          #div2{
+            margin: 50px;
+            float: left;
+            background-color:#999;
+            width:200px;
+            height:200px
+          }
+          #div3{
+            margin: 50px;
+            float: left;
+            background-color:green;
+            width:200px;
+            height:200px
+          }
+          #div4{
+            margin: 50px;
+            float: left;
+            background-color:blue;
+            width:200px;
+            height:200px
+          }
+          #svg_contains{
+            clear: both;
+          }
+    </style>
+    <script src="scripts/svgDynamicDirectionalPath.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    document.onreadystatechange = () =>
+    {
+      if(document.readyState === 'complete')
+      {
+          var div1=document.getElementById('div1');
+          var div2=document.getElementById('div2');
+          var div3=document.getElementById('div3');
+          var div4=document.getElementById('div4');
+          
+          dynamicPath(div1,div2);
+          dynamicPath(div1,div3);
+          dynamicPath(div1,div4);
+          dynamicPath(div2,div3);
+          dynamicPath(div2,div4);
+          dynamicPath(div3,div4);
+      }
+    }
+    </script>
+    <meta charset="utf-8">
+    <title>SVG Dynamic Path</title>
+  </head>
+  <body id='body'>
+        <div id='main_div'>
+               <div id="div1"></div>
+               <div id="div2"></div>
+               <div id="div3"></div>
+               <div id="div4"></div>
+        </div>
+        <div id="svg_contains"></div>
+
+  </body>
+</html>

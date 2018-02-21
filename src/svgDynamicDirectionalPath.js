@@ -8,6 +8,11 @@
     // endelements array contains of all path's end element
     function dynamicPath(elm1,elm2)
     {
+    //Here svg element with path element will be stored in this div elm dynamically
+      var div_elm = document.createElement('DIV');
+      div_elm.setAttribute('id','svg_contains');
+      document.body.appendChild(div_elm);
+
       startelements.push(elm1);
       endelements.push(elm2);
       create(elm1,elm2);
@@ -28,8 +33,6 @@
         create(startelements[i],endelements[i]);
       }
     }
-
-
     //create function start the create the path-----------------------------------------------------------------------------
     //It detects the position of start element and ending element and for good visuailzation add some extra value---
     //It also check already start point and end point is previously used in another path or not if used,
